@@ -20,14 +20,14 @@
     align-items: center;
 }
 #top .content .menu{
-    margin-left: 30px;
+    cursor: pointer;
 }
 #top .content .logo{
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-right: 30px;
+    cursor: pointer;
 }
 #top .content .search{
     padding: 0px 22px;
@@ -44,4 +44,7 @@
     width: 100%;
     font-weight: bold;
     font-size: 18px;
+}
+#top .content .search .icon{
+    cursor: pointer;
 }
