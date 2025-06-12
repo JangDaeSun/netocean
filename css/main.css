@@ -182,11 +182,20 @@
     background: black;
 }
 #center .content>.top .news .head .info{
+    position: relative;
     width: calc(100% - 132px);
     line-height: 64px;
     margin-right: 16px;
 }
+#center .content>.top .news .head .info ul{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    /* transition: 0.75s linear; */
+}
 #center .content>.top .news .head .info li{
+    position: relative;
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
@@ -226,4 +235,8 @@
     height: 400px;
     border-radius: 20px;
     border: 1px solid #05AFF2;
+}
+
+#center .content .box.off{
+    display: none;
 }
