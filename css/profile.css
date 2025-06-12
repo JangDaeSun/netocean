@@ -157,7 +157,7 @@
     overflow: hidden;
 }
 #profile .content>.right .skill .info .gbar{
-    width: 50%;
+    width: 0%;
     height: 100%;
     background: #05AFF2;
     text-align: right;
