@@ -60,9 +60,10 @@
 #profile .content>.left .list li.on{
     font-weight: bold;
 }
-#profile .content>.left .list li.on p{
+#profile .content>.left .list li p{
     position: relative;
     display: inline-block;
+    cursor: pointer;
 }
 #profile .content>.left .list li.on p::before{
     position: absolute;
@@ -110,13 +111,16 @@
     padding-left: 80px;
     padding-top: 64px;
 }
+#profile .content>.right>div.off{
+    display: none;
+}
 #profile .content .pbox{
     width: 100%;
     padding: 20px;
     border-radius: 20px;
     border: 1px solid #F29F05;
 }
-#profile .content>.right .about .info{
+#profile .content>.right .about .info, #profile .content>.right .intern .info{
     padding: 0 20px;
 }
 #profile .content>.right .about .info .name{

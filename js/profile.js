@@ -37,6 +37,26 @@ $(function(){
         });
     })
 
+    $("#profile .content>.left .list li p").click(function() {
+    let $profile = $(this).parent("li");
+    let index = $profile.index(); // li의 index 구하기
+    console.log($profile)
+    console.log(index)
+
+    // 클릭한 li에 on 클래스 부여, 나머지는 off
+    $profile.addClass("on").removeClass("off")
+        .siblings().removeClass("on").addClass("off");
+
+    // 해당 인덱스에 맞는 .right 안의 div를 on, 나머지는 off
+    $("#profile .content>.right>div").each(function(i) {
+        if (i === index) {
+            $(this).addClass("on").removeClass("off");
+        } else {
+            $(this).removeClass("on").addClass("off");
+        }
+    });
+});
+
     $(document).ready(function() {
         gbar();
     });
