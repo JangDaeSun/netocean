@@ -8,17 +8,61 @@
     display: flex;
 }
 #center .list li{
+    position: relative;
     width: 86px;
     height: 86px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    /* overflow: hidden; */
     background: white;
     border: 1px solid rgba(0, 0, 0, 0.05);
     box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.05);
     cursor: pointer;
+}
+#center .list li:hover{
+    border: 1px solid #05AFF2;
+    box-shadow: none;
+}
+#center .list li .tbox{
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    bottom: -100%;
+}
+#center .list li .text{
+    position: absolute;
+    z-index: 10;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    padding: 12px;
+    background: white;
+    border: 1px solid #05AFF2;
+    border-radius: 20px;
+    white-space: nowrap;
+    text-align: center;
+}
+#center .list li .arrow{
+    z-index: 1;
+    content: "";
+    position: absolute;
+    top: -25%;
+    left: 50%;
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 24px solid transparent;
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent;
+    border-bottom: 24px solid #05AFF2;
+    transform: translateX(-50%);
+}
+#center .list li:hover .tbox{
+    display: block;
 }
 #center .content>.list li:not(:last-of-type){
     margin-right: 40px;
@@ -26,6 +70,13 @@
 #center .content>.list li img{
     /* width: 70%; */
     height: 70%;
+}
+#center .content>.list li a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -214,10 +265,57 @@
     width: 40%;
 }
 #center .content>.top .weather .box{
+    position: relative;
     width: 100%;
     height: 264px;
     border-radius: 20px;
     border: 1px solid #05AFF2;
+    padding: 16px;
+}
+#center .content>.top .weather .box .wbox{
+    position: relative;
+}
+#center .content>.top .weather .box .locate{
+    position: absolute;
+    text-align: right;
+    right: 0;
+    top: 0;
+    font-weight: bold;
+}
+#center .content>.top .weather .box .today{
+    display: flex;
+}
+#center .content>.top .weather .box .today img{
+    width: 45%;
+}
+#center .content>.top .weather .box .today ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#center .content>.top .weather .box .today .temp{
+    font-size: 32px;
+    font-weight: bold;
+}
+#center .content>.top .weather .box .today .winfo{
+    font-size: 18px;
+    font-weight: bold;
+}
+#center .content>.top .weather .box .today .date{
+    font-weight: bold;
+}
+#center .content>.top .weather .box .next{
+    display: flex;
+    justify-content: space-between;
+}
+#center .content>.top .weather .box .next .weather-info{
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#center .content>.top .weather .box .next img{
+    width: 80%;
 }
 #center .content>.top .game .box{
     width: 100%;

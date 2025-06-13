@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="css/btm.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/top.js"></script>
+    <script src="js/weather.js"></script>
 </head>
 <body>
     <div id="all">
@@ -20,6 +22,15 @@
                         <li class="left">
                             <img class="menu icon" src="img/menu.png" alt="메뉴">
                             <div class="logo"><a href="index.html"><img src="img/logo_b.png" alt="로고"></a></div>
+                            <div class="alist">
+                                <ul>
+                                    <li><a href="">메뉴 예약</a></li>
+                                    <li><a href="">메뉴 예약</a></li>
+                                    <li><a href="">메뉴 예약</a></li>
+                                    <li><a href="">메뉴 예약</a></li>
+                                    <li><a href="">메뉴 예약</a></li>
+                                </ul>
+                            </div>
                         </li>
                         <li class="search"><input type="text"><img class="icon" src="img/search.png" alt="검색"></li>
                         <li class="hide"></li>
@@ -32,14 +43,78 @@
                 <div class="content">
                     <div class="list">
                         <ul>
-                            <li><img src="img/list/mail.png" alt="메일"></li>
-                            <li><img src="img/list/blog.png" alt="블로그"></li>
-                            <li><img src="img/list/store.png" alt="스토어"></li>
-                            <li><img src="img/list/news.png" alt="뉴스"></li>
-                            <li><img src="img/list/stock.png" alt="증권"></li>
-                            <li><img src="img/list/map.png" alt="지도"></li>
-                            <li><img src="img/list/webtoon.png" alt="웹툰"></li>
-                            <li><img src="img/list/drive.png" alt="드라이브"></li>
+                            <li>
+                                <a href="mailto:dkfowlqrhdxo@naver.com" target="_blank"><img class="licon" src="img/list/mail.png" alt="메일"></a>
+                                <div class="tbox">
+                                    <div class="text">
+                                        이메일<br>dkofwlqrhdxo@naver.com
+                                    </div>
+                                    <div class="arrow"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href=""><img class="licon" src="img/list/blog.png" alt="블로그"></a>
+                                <div class="tbox">
+                                    <div class="text">
+                                        퍼블리싱 모음
+                                    </div>
+                                    <div class="arrow"></div>
+                                </div>
+                            </li>
+                            <li><a href="">
+                                <img class="licon" src="img/list/store.png" alt="스토어"></a>
+                                <div class="tbox">
+                                    <div class="text">
+                                        리액트 구현 쇼핑몰
+                                    </div>
+                                    <div class="arrow"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href=""><img class="licon" src="img/list/news.png" alt="뉴스"></a>
+                                <div class="tbox">
+                                    <div class="text">
+                                        작업 로그
+                                    </div>
+                                    <div class="arrow"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href=""><img class="licon" src="img/list/stock.png" alt="증권"></a>
+                                <div class="tbox">
+                                    <div class="text">
+                                        학습 과정
+                                    </div>
+                                    <div class="arrow"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="profile.html"><img class="licon" src="img/list/map.png" alt="지도"></a>
+                                <div class="tbox">
+                                    <div class="text">
+                                        프로필
+                                    </div>
+                                    <div class="arrow"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href=""><img class="licon" src="img/list/webtoon.png" alt="웹툰"></a>
+                                <div class="tbox">
+                                    <div class="text">
+                                        디자인 모음
+                                    </div>
+                                    <div class="arrow"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="https://jangdaesun.github.io/portfolio/" target="_blank"><img class="licon" src="img/list/drive.png" alt="드라이브"></a>
+                                <div class="tbox">
+                                    <div class="text">
+                                        구 포트폴리오
+                                    </div>
+                                    <div class="arrow"></div>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                     <div class="top">
@@ -71,8 +146,49 @@
                                 </div>
                                 <div class="weather">
                                     <div class="ctitle">날씨</div>
-                                    <div class="box">
-                                        예약
+                                    <div class="box" id="weather-box">
+                                        로딩 중...
+                                        <!-- <div class="wbox">
+                                            <div class="locate">서울</div>
+                                            <div class="weather-info __web-inspector-hide-shortcut__ today">
+                                                <img src="https://openweathermap.org/img/wn/04n@2x.png" alt="온흐림">
+                                                <ul>
+                                                    <li class="temp">20.8℃</li>
+                                                    <li class="winfo">온흐림</li>
+                                                    <li class="date">06 / 13</li>
+                                                </ul>
+                                            </div>
+                                            <div class="next">
+                                                <div class="weather-info __web-inspector-hide-shortcut__">
+                                                    <img src="https://openweathermap.org/img/wn/04n@2x.png" alt="온흐림">
+                                                    <ul>
+                                                        <li class="temp">20.8℃</li>
+                                                        <li class="date">06 / 14</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="weather-info __web-inspector-hide-shortcut__">
+                                                    <img src="https://openweathermap.org/img/wn/04n@2x.png" alt="온흐림">
+                                                    <ul>
+                                                        <li class="temp">20.8℃</li>
+                                                        <li class="date">06 / 15</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="weather-info __web-inspector-hide-shortcut__">
+                                                    <img src="https://openweathermap.org/img/wn/04n@2x.png" alt="온흐림">
+                                                    <ul>
+                                                        <li class="temp">20.8℃</li>
+                                                        <li class="date">06 / 16</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="weather-info __web-inspector-hide-shortcut__">
+                                                    <img src="https://openweathermap.org/img/wn/04n@2x.png" alt="온흐림">
+                                                    <ul>
+                                                        <li class="temp">20.8℃</li>
+                                                        <li class="date">06 / 17</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
@@ -109,10 +225,10 @@
                                     </div>
                                     <div class="right">
                                         <h1>장대선</h1>
-                                        <p>dkfowlqrhdxo@naver.com</p>
+                                        <p><a href="mailto:dkfowlqrhdxo@naver.com" target="_blank">dkfowlqrhdxo@naver.com</a></p>
                                         <ul>
-                                            <li><img class="micon" src="img/list/mail.png" alt="메일"> 메일</li>
-                                            <li><img class="micon" src="img/list/map.png" alt="지도"> 지도</li>
+                                            <a href="mailto:dkfowlqrhdxo@naver.com" target="_blank"><li><img class="micon" src="img/list/mail.png" alt="메일"> 메일</li></a>
+                                            <a href="https://jangdaesun.github.io/portfolio/" target="_blank"><li><img class="micon" src="img/list/drive.png" alt="드라이브"> 드라이브</li></a>
                                         </ul>
                                     </div>
                                     <div class="logout">로그아웃</div>
@@ -184,7 +300,7 @@
                             <li>넷오션 정책</li>
                             <li>고객센터</li>
                         </ul>
-                        <p class="info">(주)넷오션 | 대표이사 : 장대선<br>서울특별시 은평구 갈현2동 서오릉로 | Tel : 010-2387-5939 | Email : dkfowlqrhdxo@naver.com</p>
+                        <p class="info">(주)넷오션 | 대표이사 : 장대선<br>서울특별시 은평구 갈현2동 서오릉로 | Tel : 010-2387-5939 | Email : <a href="mailto:dkfowlqrhdxo@naver.com" target="_blank">dkfowlqrhdxo@naver.com</a></p>
                         <p>&copy; Copyrights NetOcean Co., Ltd. All Right Reserved.</p>
                     </div>
                 </div>

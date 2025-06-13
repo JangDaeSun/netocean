@@ -19,7 +19,7 @@ $(function(){
     function slideNews() {
         var $ul = $("#center .content>.top .news .head .info ul");
 
-        $ul.animate({ top: "-100%" }, 750, function() {
+        $ul.stop().animate({ top: "-100%" }, 750, function() {
             var $firstLi = $ul.children("li").first();
             $ul.append($firstLi);
             $ul.css("top", "0");
