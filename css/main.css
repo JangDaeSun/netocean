@@ -189,6 +189,73 @@
     aspect-ratio: 1 / 1;
     border-radius: 20px;
     border: 1px solid #05AFF2;
+    padding: 16px;
+}
+#center .content>.top .webtoon .cbmain{
+    /* padding: 16px; */
+    display: flex;
+    height: 50%;
+}
+#center .content>.top .webtoon .cbmain .left{
+    width: 50%;
+    margin-right: 16px;
+}
+#center .content>.top .webtoon .cbmain .left img{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 20px;
+    overflow: hidden;
+}
+#center .content>.top .webtoon .cbmain .right{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#center .content>.top .webtoon .cbmain .right .name{
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+#center .content>.top .webtoon .cbmain .right .name h1{
+    margin-right: 8px;
+}
+#center .content>.top .webtoon .cbsub{
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#center .content>.top .webtoon .cbsub .cbsbox{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+}
+#center .content>.top .webtoon .cbsub .cbsbox .left{
+    width: 40%;
+    margin-right: 8px;
+}
+#center .content>.top .webtoon .cbsub .cbsbox .left img{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 20px;
+    overflow: hidden;
+}
+#center .content>.top .webtoon .cbsub .cbsbox .right{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#center .content>.top .webtoon .cbsub .cbsbox .right .name{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 4px;
+}
+#center .content>.top .webtoon .cbsub .cbsbox .right .name h3{
+    margin-right: 8px;
 }
 #center .content>.top .stock .box{
     width: 100%;

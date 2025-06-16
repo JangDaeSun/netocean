@@ -137,3 +137,20 @@ img {
     height: 1px;
     background: #05AFF2;
 }
+
+.cbox{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.cbox .cbtitle{
+    text-align: right;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-weight: bold;
+}
+
+span{
+    display: inline-block;
+}
