@@ -95,7 +95,8 @@
     margin-right: 40px;
 }
 #center .content>.top>.right{
-    width: 35%;
+    flex: 1;
+    min-width: 0;
 }
 #center .content>.top .top_banner{
     border-radius: 20px;
@@ -189,7 +190,12 @@
     aspect-ratio: 1 / 1;
     border-radius: 20px;
     border: 1px solid #05AFF2;
-    padding: 20px;
+    padding: 16px;
+}
+#center .content>.top .webtoon .cbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 #center .content>.top .webtoon .cbmain{
     /* padding: 16px; */
@@ -226,9 +232,11 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
 }
 #center .content>.top .webtoon .cbsub .cbsbox{
-    width: 50%;
+    width: 49%;
     height: 50%;
     display: flex;
     align-items: center;
@@ -236,12 +244,13 @@
 #center .content>.top .webtoon .cbsub .cbsbox .left{
     width: 40%;
     margin-right: 8px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #D9D9D9;
 }
 #center .content>.top .webtoon .cbsub .cbsbox .left img{
     width: 100%;
     aspect-ratio: 1 / 1;
-    border-radius: 20px;
-    overflow: hidden;
 }
 #center .content>.top .webtoon .cbsub .cbsbox .right{
     width: 60%;
@@ -255,12 +264,12 @@
     align-items: center;
     margin-bottom: 4px;
 }
-#center .content>.top .webtoon .cbsub .cbsbox .right .name h3{
-    margin-right: 8px;
+#center .content>.top .webtoon .cbsub .cbsbox .right .name .title{
+    margin-right: 4px;
 }
 #center .content>.top .stock .box{
     width: 100%;
-    height: 240px;
+    height: 290px;
     border-radius: 20px;
     border: 1px solid #05AFF2;
 }
@@ -325,7 +334,7 @@
 }
 #center .content>.top .news .box{
     width: 100%;
-    height: 180px;
+    height: 200px;
     border-radius: 20px;
     border: 1px solid #05AFF2;
     padding: 16px;
@@ -341,6 +350,7 @@
     aspect-ratio: 16 / 9;
     background: #D9D9D9;
     margin-right: 16px;
+    border-radius: 8px;
 }
 #center .content>.top .news .cbmain .left img{
     width: 100%;
@@ -350,6 +360,16 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex: 1; /* ⭐ 이거 추가하세요 */
+    min-width: 0; /* ⭐ 넘침 방지를 위해 이것도 함께 추가하면 안전 */
+}
+#center .content>.top .news .cbmain .right h2{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#center .content>.top .news .cbmain .right>.flex h4{
+    margin-right: 8px;
 }
 #center .content>.top .news .cbsub p{
     white-space: nowrap;
@@ -362,13 +382,17 @@
 #center .content>.top .weather .box{
     position: relative;
     width: 100%;
-    height: 264px;
+    height: 284px;
     border-radius: 20px;
     border: 1px solid #05AFF2;
     padding: 16px;
 }
 #center .content>.top .weather .box .wbox{
     position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 #center .content>.top .weather .box .locate{
     position: absolute;
@@ -414,9 +438,54 @@
 }
 #center .content>.top .game .box{
     width: 100%;
-    height: 330px;
+    height: 334px;
     border-radius: 20px;
     border: 1px solid #05AFF2;
+    padding: 16px;
+}
+#center .content>.top .game .box .cbox{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+#center .content>.top .game .box .cbox .cbtitle{
+    top: -48px;
+}
+#center .content>.top .game .box .cbbox{
+    width: 50%;
+    height: 30%;
+    display: flex;
+}
+#center .content>.top .game .box .cbbox .left{
+    height: 100%;
+    aspect-ratio: 16 / 9;
+    background: #D9D9D9;
+    margin-right: 16px;
+    border-radius: 8px;
+}
+#center .content>.top .game .box .cbbox .right{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#center .content>.top .game .box .cbbox .right .title{
+    margin-bottom: 4px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;   /* 최대 2줄까지만 보여줌 */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#center .content>.top .game .box .cbbox .right .image{
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #D9D9D9;
+    margin-right: 4px;
 }
 #center .content>.top .btm_banner{
     border-radius: 20px;
