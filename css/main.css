@@ -272,6 +272,17 @@
     height: 290px;
     border-radius: 20px;
     border: 1px solid #05AFF2;
+    padding: 16px;
+}
+#center .content>.top .stock .box .cbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    overflow: hidden;
+}
+#center .content>.top .stock .box video{
+    height: 100%;
 }
 #center .content>.top .subcontent{
     display: flex;
