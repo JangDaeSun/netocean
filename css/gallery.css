@@ -1,0 +1,30 @@
+@charset "utf-8";
+#gallery{
+    margin: 64px 0;
+}
+#gallery .content{
+    position: relative;
+    height: 4000px;
+}
+#gallery .content .left{
+    position: absolute;
+    height: 100%;
+    right: calc(100% + 40px);
+    white-space: nowrap;
+    font-size: 24px;
+    font-weight: bold;
+}
+#gallery .content .left ul{
+    position: sticky;
+        top: 0;
+}
+
+#gallery .publishing .box{
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid #05AFF2;
+    padding: 16px;
+}
+#gallery .publishing .box.off{
+    display: none;
+}
