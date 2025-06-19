@@ -18,18 +18,27 @@
     top: 64px;
     line-height: 40px;
 }
+#gallery .content>.left ul li{
+    cursor: pointer;
+}
+#gallery .content>.left ul .off{
+    font-weight: normal;
+}
+#gallery .content>.right>div.off{
+    display: none;
+}
 
-#gallery .publishing .box{
+#gallery .box{
     width: 100%;
     border-radius: 20px;
     border: 1px solid #05AFF2;
     padding: 16px;
 }
-#gallery .publishing .box.off{
+#gallery .box.off{
     display: none;
 }
 
-#gallery .publishing .box .cbox{
+#gallery .box .cbox{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -37,10 +46,10 @@
     column-gap: 2%;
     row-gap: 20px
 }
-#gallery .publishing .box .cbbox{
+#gallery .box .cbbox{
     width: 32%;
 }
-#gallery .publishing .box .cbbox .image{
+#gallery .box .cbbox .image{
     width: 100%;
     aspect-ratio: 16 / 9;
     background: #D9D9D9;
@@ -48,13 +57,13 @@
     margin-bottom: 16px;
     overflow: hidden;
 }
-#gallery .publishing .box .cbbox .image img{
+#gallery .box .cbbox .image img{
     transition: .75s;
 }
-#gallery .publishing .box .cbbox .image:hover img{
+#gallery .box .cbbox .image:hover img{
     scale: 1.1;
 }
-#gallery .publishing .box .cbbox .title{
+#gallery .box .cbbox .title{
     font-size: 24px;
     font-weight: bold;
     white-space: nowrap;
@@ -62,16 +71,16 @@
     text-overflow: ellipsis;
     margin-bottom: 8px;
 }
-#gallery .publishing .box .cbbox .info{
+#gallery .box .cbbox .info{
     position: relative;
     display: flex;
     align-items: center;
     height: 32px;
 }
-#gallery .publishing .box .cbbox .info .left{
+#gallery .box .cbbox .info .left{
     margin-right: 8px;
 }
-#gallery .publishing .box .cbbox .info .right{
+#gallery .box .cbbox .info .right{
     font-size: 16px;
     white-space: nowrap;
     overflow: hidden;
@@ -79,10 +88,10 @@
     flex: 1;
     min-width: 0;
 }
-#gallery .publishing .box .cbbox:hover .info .left{
+#gallery .box .cbbox:hover .info .left{
     display: none;
 }
-#gallery .publishing .box .cbbox:hover .info .right{
+#gallery .box .cbbox:hover .info .right{
     position: absolute;
     top: 2px;
     font-size: 18px;
