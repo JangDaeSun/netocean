@@ -260,12 +260,13 @@
     justify-content: center;
 }
 #center .content>.top .webtoon .cbsub .cbsbox .right .name{
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: center; */
     margin-bottom: 4px;
 }
 #center .content>.top .webtoon .cbsub .cbsbox .right .name .title{
+    display: inline;
     margin-right: 4px;
 }
 #center .content>.top .stock .box{
