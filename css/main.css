@@ -205,6 +205,7 @@
 }
 #center .content>.top .webtoon .cbmain .left{
     width: 50%;
+    aspect-ratio: 1 / 1;
     margin-right: 16px;
 }
 #center .content>.top .webtoon .cbmain .left img{
