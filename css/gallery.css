@@ -93,12 +93,15 @@
 }
 #gallery .box .cbbox:hover .info .right{
     position: absolute;
-    top: 2px;
+    top: -4px;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 18px;
     white-space: normal;
     overflow: visible;
     text-overflow: unset;
-    width: 100%;
+    padding: 2%;
+    width: 104%;
     background: white;
     border-radius: 8px;
 }
