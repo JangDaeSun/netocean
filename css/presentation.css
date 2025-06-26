@@ -1,0 +1,104 @@
+@charset "utf-8";
+#presentation{
+    margin: 64px 0;
+}
+#presentation .content{
+    position: relative;
+}
+#presentation .box{
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid #05AFF2;
+    padding: 16px;
+}
+#presentation .box .cbox{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    column-gap: 2%;
+    row-gap: 20px
+}
+#presentation .box .cbbox{
+    width: 32%;
+    overflow: hidden;
+}
+#presentation .box .cbbox .image{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #D9D9D9;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    overflow: hidden;
+}
+#presentation .box .cbbox .image img{
+    transition: .75s;
+}
+#presentation .box .cbbox .image:hover img{
+    scale: 1.1;
+}
+#presentation .box .cbbox .title{
+    font-size: 24px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 8px;
+}
+#presentation .box .cbbox .info{
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 32px;
+}
+#presentation .box .cbbox .info .left{
+    margin-right: 8px;
+}
+#presentation .box .cbbox .info .right{
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: 1;
+    min-width: 0;
+}
+#presentation .box .cbbox:hover .info .left{
+    display: none;
+}
+#presentation .box .cbbox:hover .info .right{
+    position: absolute;
+    z-index: 10;
+    top: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+    padding: 2%;
+    width: 104%;
+    background: white;
+    border-radius: 8px;
+}
+#presentation .box .cbbox .scroll{
+    display: none;
+}
+#presentation .box .cbbox .scroll .sbox{
+    border-radius: 8px;
+    overflow: hidden;
+}
+#presentation .box .cbbox .scroll .sbox.off{
+    display: none;
+}
+#presentation .box .cbbox .back{
+    display: none;
+    text-align: right;
+    padding-right: 8px;
+    font-size: 24px;
+}
+
+.sbox img, .sbox video{
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+}

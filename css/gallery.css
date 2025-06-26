@@ -1,0 +1,115 @@
+@charset "utf-8";
+body {
+    visibility: hidden;
+}
+#gallery{
+    margin: 64px 0;
+}
+#gallery .content{
+    position: relative;
+}
+#gallery .content>.left{
+    position: absolute;
+    height: 100%;
+    right: calc(100% + 40px);
+    white-space: nowrap;
+    font-size: 24px;
+    font-weight: bold;
+}
+#gallery .content>.left ul{
+    position: sticky;
+    top: 64px;
+    line-height: 40px;
+}
+#gallery .content>.left ul li{
+    cursor: pointer;
+}
+#gallery .content>.left ul .off{
+    font-weight: normal;
+}
+#gallery .content>.right>div.off{
+    display: none;
+}
+
+#gallery .box{
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid #05AFF2;
+    padding: 16px;
+}
+#gallery .box.off{
+    display: none;
+}
+
+#gallery .box .cbox{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    column-gap: 2%;
+    row-gap: 20px
+}
+#gallery .box .cbbox{
+    width: 32%;
+}
+#gallery .box .cbbox .image{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #D9D9D9;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    overflow: hidden;
+}
+#gallery .box .cbbox .image img{
+    transition: .75s;
+}
+#gallery .box .cbbox .image:hover img{
+    scale: 1.1;
+}
+#gallery .box .cbbox .title{
+    font-size: 24px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 8px;
+}
+#gallery .box .cbbox .info{
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 32px;
+}
+#gallery .box .cbbox .info .left{
+    margin-right: 8px;
+}
+#gallery .box .cbbox .info .right{
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: 1;
+    min-width: 0;
+}
+#gallery .box .cbbox:hover .info .left{
+    display: none;
+}
+#gallery .box .cbbox:hover .info .right{
+    position: absolute;
+    z-index: 10;
+    top: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+    padding: 2%;
+    width: 104%;
+    background: white;
+    border-radius: 8px;
+}
+
+#gallery a img, #gallery .image img{
+    object-fit: cover;
+}
