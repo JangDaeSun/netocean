@@ -27,7 +27,7 @@ $(function () {
         startSliding();
     }, 3000);
 
-    $(".menu").on("click", function (e) {
+    $("#center .content>.top .news .menu").on("click", function (e) {
         e.stopPropagation();
 
         if (!isExpanded) {
