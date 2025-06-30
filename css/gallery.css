@@ -16,6 +16,21 @@ body {
     font-size: 24px;
     font-weight: bold;
 }
+@media screen and (max-width:1600px) {
+    #gallery .content>.left{
+        position: relative;
+        height: inherit;
+        right: inherit;
+        margin-bottom: 40px;
+    }
+    #gallery .content>.left ul{
+        display: flex;
+    }
+    #gallery .content>.left ul li{
+        margin-right: 16px;
+    }
+}
+
 #gallery .content>.left ul{
     position: sticky;
     top: 64px;
