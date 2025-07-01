@@ -1,0 +1,72 @@
+@charset "utf-8";
+#intro{
+    position: fixed;
+    z-index: 1000;
+    width: 100vw;
+    height: 100vh;
+    background: white;
+}
+
+#intro .mainbox{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+#intro .up{
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 100%;
+}
+#intro .up .box{
+    width: 20%;
+    height: 100%;
+}
+#intro .up .box.off{
+    display: none;
+}
+#intro .up .box:not(:last-of-type){
+    border-left: 16px solid black;
+}
+#intro .up .box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#intro .background{
+    position: absolute;
+}
+#intro .background .box{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+#intro .background .box.off{
+    display: none;
+}
+
+#intro .title{
+    position: absolute;
+    color: white;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    font-size: 62px;
+    font-weight: 800;
+    text-shadow: 0 0 10px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#intro .title>div{
+    position: absolute;
+    scale: 0;
+}

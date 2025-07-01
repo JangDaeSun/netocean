@@ -8,15 +8,46 @@
     <link rel="stylesheet" href="css/top.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/btm.css">
+    <link rel="stylesheet" href="css/intro.css">
+    <style id="hide-scrollbar">
+        html, body {
+            overflow: hidden;
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/news.js"></script>
     <script src="js/top.js"></script>
     <script src="js/weather.js"></script>
     <script src="js/main_banner.js"></script>
+    <script src="js/intro.js"></script>
 </head>
 <body>
     <div id="all">
+        <section id="intro">
+            <div class="mainbox">
+                <div class="up">
+                    <div class="box off"><img src="intro/marvel_up.png" alt="마블"></div>
+                    <div class="box off"><img src="intro/pandora_up.png" alt="판도라"></div>
+                    <div class="box off"><img src="intro/radeon_up.png" alt="라데온"></div>
+                    <div class="box off"><img src="intro/star_up.png" alt="스타벅스"></div>
+                    <div class="box off"><img src="intro/vivid_up.png" alt="비비드"></div>
+                </div>
+                <div class="background">
+                    <div class="box"><img src="intro/marvel.png" alt="마블"></div>
+                    <div class="box off"><img src="intro/pandora.png" alt="판도라"></div>
+                    <div class="box off"><img src="intro/radeon.png" alt="라데온"></div>
+                    <div class="box off"><img src="intro/star.png" alt="스타벅스"></div>
+                    <div class="box off"><img src="intro/vivid.png" alt="비비드"></div>
+                </div>
+                <div class="title">
+                    <div>JANG DAE SUN</div>
+                </div>
+            </div>
+        </section>
         <section id="top">
             <div class="mainbox">
                 <div class="content">
@@ -130,7 +161,7 @@
                                 </div>
                                 <div class="action">
                                     <div class="image">
-                                        <img src="img/advertising/main_action.gif" alt="메인배너 영상">
+                                        <a href="https://jangdaesun.github.io/marvel/" target="_blank"><img src="img/advertising/main_action.gif" alt="메인배너 영상"></a>
                                     </div>
                                 </div>
                                 <div class="cursor">
