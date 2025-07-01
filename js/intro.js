@@ -4,24 +4,38 @@ $(function() {
     const introOff = params.get('intro');
 
     if (introOff === 'off') {
-        // intro=off 이면 인트로 건너뛰고 바로 스크롤 가능하게
         $('html, body').css('overflow', '');
         $('#hide-scrollbar').remove();
-        $('#intro').remove(); // 필요하다면 제거
-        return; // intro 애니메이션 실행 안함
+        $('#intro').remove();
+        return;
     }
 
-    // ✅ 이하 원래 intro.js 코드 실행
+    // ✅ 이미지 미리 로드 함수
+    function preloadImages($images) {
+        const promises = [];
+        $images.each(function() {
+            const img = new Image();
+            const src = $(this).attr('src');
+            const promise = new Promise((resolve) => {
+                img.onload = resolve;
+                img.onerror = resolve; // 에러여도 resolve 해주기
+                img.src = src;
+            });
+            promises.push(promise);
+        });
+        return Promise.all(promises);
+    }
+
+    // ✅ intro.js 원래 코드
     const $backgroundBoxes = $('#intro .background .box');
     const $upBoxes = $('#intro .up .box');
     const total = $backgroundBoxes.length;
-
     const windowHeight = window.innerHeight;
 
     function animateBox(i) {
         if (i >= total) {
-        animateTitle();
-        return;
+            animateTitle();
+            return;
         }
 
         const $bgBox = $backgroundBoxes.eq(i);
@@ -36,42 +50,47 @@ $(function() {
         const $nextBgBox = $backgroundBoxes.eq(i + 1);
 
         if ($nextBgBox.length) {
-        const $nextImg = $nextBgBox.find('img');
-        $nextBgBox.css({ top: '100%', zIndex: 1 }).removeClass('off');
-        $nextBgBox.animate({ top: '0%' }, 1000);
+            const $nextImg = $nextBgBox.find('img');
+            $nextBgBox.css({ top: '100%', zIndex: 1 }).removeClass('off');
+            $nextBgBox.animate({ top: '0%' }, 1000);
         }
 
         $bgBox.animate({ top: moveAmount + 'px' }, 1000, function() {
-        $upBox.removeClass('off');
-        $bgBox.addClass('off').css({ top: 0, zIndex: '' });
+            $upBox.removeClass('off');
+            $bgBox.addClass('off').css({ top: 0, zIndex: '' });
 
-        if ($nextBgBox.length) {
-            animateBox(i + 1);
-        } else {
-            animateTitle();
-        }
+            if ($nextBgBox.length) {
+                animateBox(i + 1);
+            } else {
+                animateTitle();
+            }
         });
     }
-
-    animateBox(0);
 
     function animateTitle() {
         const $titles = $('#intro .title > div');
         const $title = $titles.eq(0);
 
         $title.on('transitionend', function() {
-        $('#intro').fadeOut(1000, function() {
-            $(this).css('display', 'none');
-            $('html, body').css('overflow', '');
-            $('#hide-scrollbar').remove();
-        });
-        $title.off('transitionend');
+            $('#intro').fadeOut(1000, function() {
+                $(this).css('display', 'none');
+                $('html, body').css('overflow', '');
+                $('#hide-scrollbar').remove();
+            });
+            $title.off('transitionend');
         });
 
         $title.css({
-        transition: '2s ease',
-        scale: '1',
-        fontSize: '128px'
+            transition: '2s ease',
+            scale: '1',
+            fontSize: '128px'
         });
     }
+
+    // ✅ 이미지 로딩 끝나면 시작
+    const $allImages = $('#intro .background .box img');
+    preloadImages($allImages).then(() => {
+        console.log('✅ 모든 이미지 로딩 완료! 인트로 시작');
+        animateBox(0);
+    });
 });
